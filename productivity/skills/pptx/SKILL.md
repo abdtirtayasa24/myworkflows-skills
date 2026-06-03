@@ -10,9 +10,22 @@ license: Proprietary. LICENSE.txt has complete terms
 
 | Task | Guide |
 |------|-------|
+| Check dependencies | Verify runtime dependencies before first use |
 | Read/analyze content | `python -m markitdown presentation.pptx` |
 | Edit or create from template | Read [editing.md](editing.md) |
 | Create from scratch | Read [pptxgenjs.md](pptxgenjs.md) |
+
+---
+
+## Dependency Policy
+
+Dependencies are environment-level prerequisites.
+
+- Do not install dependencies during normal skill execution.
+- Do not run `pip install`, `npm install`, `apt install`, or `brew install` unless the user explicitly requests environment setup.
+- Prefer checking whether dependencies exist before using them.
+- If dependencies are missing, report the missing dependency and provide installation guidance.
+- For repeated usage, dependencies should be installed once in the agent runtime, virtual environment, container image, or project-level setup files.
 
 ---
 
@@ -164,7 +177,7 @@ If grep returns results, fix them before declaring success.
 
 **⚠️ USE SUBAGENTS** — even for 2-3 slides. You've been staring at the code and will see what you expect, not what's there. Subagents have fresh eyes.
 
-Convert slides to images (see [Converting to Images](#converting-to-images)), then use this prompt:
+Convert slides to images (see `## Converting to Images`), then use this prompt:
 
 ```
 Visually inspect these slides. Assume there are issues — find them.
@@ -223,10 +236,29 @@ pdftoppm -jpeg -r 150 -f N -l N output.pdf slide-fixed
 
 ---
 
-## Dependencies
+## Runtime Dependencies
 
-- `pip install "markitdown[pptx]"` - text extraction
-- `pip install Pillow` - thumbnail grids
-- `npm install -g pptxgenjs` - creating from scratch
-- LibreOffice (`soffice`) - PDF conversion (auto-configured for sandboxed environments via `scripts/office/soffice.py`)
-- Poppler (`pdftoppm`) - PDF to images
+This skill assumes the following dependencies are already installed in the agent runtime.
+Do not install dependencies during normal skill execution.
+
+Required Python packages:
+
+- `markitdown[pptx]` — text extraction from `.pptx`
+- `Pillow` — thumbnail grid generation
+
+Required Node package:
+
+- `pptxgenjs` — creating `.pptx` files from scratch
+
+Required system binaries:
+
+- LibreOffice / `soffice` — converting `.pptx` to `.pdf`
+- Poppler / `pdftoppm` — converting `.pdf` pages to images
+
+Before using this skill, verify dependencies with:
+
+```bash
+python -c "import markitdown, PIL; print('Python dependencies OK')"
+node -e "require('pptxgenjs'); console.log('pptxgenjs OK')"
+python scripts/office/soffice.py --version || soffice --version
+pdftoppm -v
