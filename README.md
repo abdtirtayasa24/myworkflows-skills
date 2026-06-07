@@ -8,7 +8,7 @@ Each skill lives in its own folder with a `SKILL.md` file, plus any extra notes 
 
 - `engineering/skills/` — software engineering, debugging, testing, architecture, frontend, React, and database guidance.
 - `product-management/skills/` — PRDs, issue creation, triage, planning, and documentation-driven decision making.
-- `business/skills/` — lead research, marketing reports, and user research synthesis.
+- `business/skills/` — lead research, marketing reports, deep research, and user research synthesis.
 - `productivity/skills/` — handoffs, presentation work, skill authoring, and high-level context prompts.
 
 ## Skills by Category
@@ -17,7 +17,7 @@ Each skill lives in its own folder with a `SKILL.md` file, plus any extra notes 
 | --- | --- |
 | Engineering | `code-reviewer`, `diagnose`, `frontend-ui-engineering`, `impeccable`, `improve-codebase-architecture`, `react-best-practices`, `supabase-postgres-best-practices`, `tdd` |
 | Product management | `grill-with-docs`, `setup-matt-pocock-skills`, `to-issues`, `to-prd`, `triage` |
-| Business | `lead-research-assistant`, `performance-report`, `research-synthesis` |
+| Business | `lead-research-assistant`, `performance-report`, `research-synthesis`, `deep-research` |
 | Productivity | `handoff`, `pptx`, `write-a-skill`, `zoom-out` |
 
 ## Folder Structure
