@@ -27,11 +27,11 @@ Prefer the bundled templates and the helper script for consistent structure and 
 ## Skill path (set once)
 
 ```bash
-export CODEX_HOME="${CODEX_HOME:-$HOME/.codex}"
-export JUPYTER_NOTEBOOK_CLI="$CODEX_HOME/skills/jupyter-notebook/scripts/new_notebook.py"
+export PI_HOME="${PI_HOME:-$HOME/.agents}"
+export JUPYTER_NOTEBOOK_CLI="$PI_HOME/skills/jupyter-notebook/scripts/new_notebook.py"
 ```
 
-User-scoped skills install under `$CODEX_HOME/skills` (default: `~/.codex/skills`).
+User-scoped skills install under `$PI_HOME/skills` (default: `~/.agents/skills`).
 
 ## Workflow
 1. Lock the intent.
@@ -42,14 +42,14 @@ Capture the objective, audience, and what "done" looks like.
 Use the helper script to avoid hand-authoring raw notebook JSON.
 
 ```bash
-uv run --python 3.12 python "$JUPYTER_NOTEBOOK_CLI" \
+python "$JUPYTER_NOTEBOOK_CLI" \
   --kind experiment \
   --title "Compare prompt variants" \
   --out output/jupyter-notebook/compare-prompt-variants.ipynb
 ```
 
 ```bash
-uv run --python 3.12 python "$JUPYTER_NOTEBOOK_CLI" \
+python "$JUPYTER_NOTEBOOK_CLI" \
   --kind tutorial \
   --title "Intro to embeddings" \
   --out output/jupyter-notebook/intro-to-embeddings.ipynb
@@ -92,7 +92,7 @@ Prefer `uv` for dependency management.
 Optional Python packages for local notebook execution:
 
 ```bash
-uv pip install jupyterlab ipykernel
+pip install jupyterlab ipykernel
 ```
 
 The bundled scaffold script uses only the Python standard library and does not require extra dependencies.
