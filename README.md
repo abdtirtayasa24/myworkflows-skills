@@ -15,8 +15,8 @@ Each skill lives in its own folder with a `SKILL.md` file, plus any extra notes 
 
 | Category | Skills |
 | --- | --- |
-| Engineering | `code-reviewer`, `diagnose`, `frontend-ui-engineering`, `impeccable`, `improve-codebase-architecture`, `react-best-practices`, `postgres-best-practices`, `tdd`, `fastapi-best-practices`, `jupyter-notebook` |
-| Product management | `grill-with-docs`, `setup-matt-pocock-skills`, `to-issues`, `to-prd`, `triage` |
+| Engineering | `code-reviewer`, `diagnose`, `frontend-ui-engineering`, `impeccable`, `improve-codebase-architecture`, `react-best-practices`, `postgres-best-practices`, `tdd`, `fastapi-best-practices`, `jupyter-notebook`, `grill-with-docs` |
+| Product management | `setup-matt-pocock-skills`, `to-issues`, `to-prd`, `triage` |
 | Business | `lead-research-assistant`, `performance-report`, `research-synthesis`, `deep-research` |
 | Productivity | `handoff`, `pptx`, `write-a-skill`, `zoom-out`, `ian-xiaohei-illustrations` |
 
