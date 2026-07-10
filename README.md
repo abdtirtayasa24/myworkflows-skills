@@ -15,7 +15,7 @@ Each skill lives in its own folder with a `SKILL.md` file, plus any extra notes 
 
 | Category | Skills |
 | --- | --- |
-| Engineering | `code-reviewer`, `context-engineering`, `deprecation-and-migration`, `diagnose`, `documentation-and-adrs`, `fastapi-best-practices`, `git-workflow-and-versioning`, `grill-with-docs`, `impeccable`, `improve-codebase-architecture`, `incremental-implementation`, `jupyter-notebook`, `performance-optimization`, `planning-and-task-breakdown`, `postgres-best-practices`, `react-best-practices`, `security-and-hardening`, `shipping-and-launch`, `spec-driven-development`, `test-driven-development` |
+| Engineering | `code-reviewer`, `context-engineering`, `deprecation-and-migration`, `diagnose`, `documentation-and-adrs`, `fastapi-best-practices`, `git-workflow-and-versioning`, `grill-with-docs`, `impeccable`, `improve-codebase-architecture`, `incremental-implementation`, `jupyter-notebook`, `performance-optimization`, `planning-and-task-breakdown`, `postgres-best-practices`, `python-best-practices`, `react-best-practices`, `security-and-hardening`, `shipping-and-launch`, `spec-driven-development`, `test-driven-development` |
 | Product management | `setup-matt-pocock-skills`, `to-issues`, `to-prd`, `triage` |
 | Business | `lead-research-assistant`, `performance-report`, `research-synthesis`, `deep-research` |
 | Productivity | `handoff`, `pptx`, `write-a-skill`, `zoom-out`, `ian-xiaohei-illustrations` |
